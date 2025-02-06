@@ -1,0 +1,88 @@
+<% layout("/layouts/boilerplate") %>
+
+    <h2>Create new listing</h2>
+    <!-- nonvalidate to avoid default validation using bootstrap -->
+    <form action="/listing" method="post" novalidate class=needs-validation"> 
+      <div class="mb-3">
+        <label for="title" class="form-label">Enter Title</label>
+        <input
+          type="text"
+          name="listing[title]"
+          placeholder="Enter title"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback"> looks good</div>
+        <div class="invalid-feedback">please fill the field</div>
+      </div>
+      <div>
+        <label for="description" class="form-label"   >Enter Description</label>
+        <textarea
+          name="listing[description]"
+          placeholder="Enter description"
+          class="form-control"
+          required
+        >
+        </textarea>
+        <div class="valid-feedback"> looks good</div>
+        <div class="invalid-feedback">please fill the field</div>
+      </div>
+      <div>
+        <label for="url" class="form-label">Enter Image url</label>
+        <input
+          type="text"
+          name="listing[image]"
+          placeholder="Enter url"
+          class="form-control"
+        />
+        <div class="valid-feedback"> looks good</div>
+        <div class="invalid-feedback">please fill the field</div>
+        <br />
+      </div>
+      <div>
+        <label for="price" class="form-label">Enter Price</label>
+        <input
+          type="number"
+          name="listing[price]"
+          placeholder="Enter price"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback"> looks good</div>
+        <div class="invalid-feedback">please fill the field</div>
+        <br />
+
+      </div>
+      <div>
+        <label for="location" class="form-label">Enter Location</label>
+        <input
+          type="text"
+          name="listing[location]"
+          class="form-control"
+          placeholder="Enter location"
+          required
+        />
+        <div class="valid-feedback"> looks good</div>
+        <div class="invalid-feedback">please fill the field</div>
+        <br />
+
+      </div>
+      <div>
+        <label for="country" class="form-label">Enter Country</label>
+        <input
+          type="text"
+          name="listing[country]"
+          class="form-control"
+          placeholder="Enter country"
+          required
+        />
+        <div class="valid-feedback"> looks good</div>
+        <div class="invalid-feedback">please fill the field</div>
+        <br />
+      </div>
+
+      <button class="btn btn-dark">submit</button> <br>
+    </form>
+    <script src="/public/js/script.js"></script>
+  </body>
+
